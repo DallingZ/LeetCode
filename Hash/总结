@@ -1,0 +1,30 @@
+数组 (Array),int map[26] = {0}
+哈希集合 (Set),unordered_set<int> st
+哈希映射 (Map),"unordered_map<int, int> mp;"
+
+1.数组哈希 (Array Hashing)：用 int map[26] 处理字母统计。
+    代表作：242. 有效的字母异位词、383. 赎金信
+
+2.集合去重 (Set Deduplication)：用 unordered_set 快速判断存在性。
+    代表作：349. 两个数组的交集
+
+3.键值对映射 (Key-Value Mapping)：用 unordered_map 找“补数”或记录下标。
+    代表作：1. 两数之和、454. 四数相加 II
+
+4.分组归类 (Grouping)：设计复杂的 Key 来对数据分类。
+    代表作：49. 字母异位词分组
+
+map查找：if (map.count(key)) { ... } 
+        if (map.find(key) != map.end()) { ... }
+计数统计（统计字符或数字出现的次数）：map[key]++; // 这一句顶三句，直接把 key 的次数加 1
+记录下标：用于“两数之和”类题目，我们需要知道“谁”在“哪”。
+遍历hash：  for (auto [key, value] : map) {
+                // 直接用 key 和 value
+            }
+            for (int x : set) {
+                // 直接用 x
+            }
+数组转集合： vector<int> nums = {1, 2, 2, 3};
+            unordered_set<int> st(nums.begin(), nums.end()); // st 现在是 {1, 2, 3}
+删除：map.erase(key); // 把这个 key 和对应的 value 一起删掉
+排序key：Map -》 Vector -》 Sort
