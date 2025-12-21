@@ -1,0 +1,8 @@
+// reverse 左闭右开
+
+一串一串反转   
+            for(int i = 0; i < n - 1; i = i + 2*k){
+            reverse(s.begin() + i, s.begin() + min(n, i + k));
+        }
+
+// KMP
