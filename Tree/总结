@@ -21,3 +21,9 @@
 出房间时：把数字擦掉
 
 二叉搜索树：  验证——中序遍历&&严格递增
+共同祖先：
+空直接返回root
+不空的情况下，都小，root=root->left;
+            都大，root=root->right;
+            否则，直接返回
+插入用递归，找到直接返回return new Tree Node（val）；
